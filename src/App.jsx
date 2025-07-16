@@ -3,7 +3,6 @@ import './App.css'
 import Login from './Components/Login/Login'
 import Home from './Components/Home/Home'
 function App() {
-  const [activeTab , setActiveTab] = useState("Members")
 
 
 
@@ -17,7 +16,7 @@ function App() {
     <div>
       
       {
-        isLoggedIn ? <Home activeTab={activeTab} setActiveTab={setActiveTab} /> : <Login/>
+        isLoggedIn ? <Home/> : <Login/>
       }
       
     </div>
