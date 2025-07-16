@@ -3,20 +3,21 @@ import './App.css'
 import Login from './Components/Login/Login'
 import Home from './Components/Home/Home'
 function App() {
+  const [activeTab , setActiveTab] = useState("Members")
 
 
 
   const [isLoggedIn , setIsLoggedIn] = useState(()=>{
     return localStorage.getItem('isLoggedIn') === "true"
   })
- 
-
+  //to view home page and to be deleted
+  localStorage.setItem('isLoggedIn',true)
 
   return (
     <div>
       
       {
-        isLoggedIn ? <Home/> : <Login/>
+        isLoggedIn ? <Home activeTab={activeTab} setActiveTab={setActiveTab} /> : <Login/>
       }
       
     </div>
