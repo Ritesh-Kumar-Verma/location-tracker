@@ -1,0 +1,48 @@
+.login-signup-window{
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+.left-signup{
+    background-color: blueviolet;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+.left-signup p{
+    font-size: 30px;
+}
+.login-signup-window .left-signup form{
+    width: 80%;
+}
+.login-signup-window .left-signup form label{
+    font-size: 12px;
+    color: white;
+}
+
+
+.login-signup-window .left-signup form input{
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid white;
+    width: 100%;
+    margin-bottom: 10px;
+}
+#agreement{
+    width: fit-content;
+}
+
+
+
+
+
+
+
+
+.right-login{
+    background-color: blue;
+    flex: 1;
+}
