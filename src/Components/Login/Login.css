@@ -1,48 +1,202 @@
-.login-signup-window{
-    display: flex;
-    flex-direction: row;
-    min-height: 100vh;
-}
-.left-signup{
-    background-color: blueviolet;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-}
-.left-signup p{
-    font-size: 30px;
-}
-.login-signup-window .left-signup form{
-    width: 80%;
-}
-.login-signup-window .left-signup form label{
-    font-size: 12px;
-    color: white;
-}
-
-
-.login-signup-window .left-signup form input{
-    border: none;
-    background: transparent;
-    border-bottom: 1px solid white;
-    width: 100%;
-    margin-bottom: 10px;
-}
-#agreement{
-    width: fit-content;
+.login-signup-window {
+  display: flex;
+  min-height: 100vh;
 }
 
 
 
+.signup-window {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/left.jpg");
+  background-size: cover;
+}
+.login-window {
+  display: flex;
+  width: 100vw;
+  min-height: 100vh;
+  background-image: url("../../assets/right.jpg");
+  background-size: cover;
+}
+.left-signup {
+  background: linear-gradient(to right, #6dd5fa, #2980b9);
+  background-size: cover;
+  display: flex;
+  width: 40%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  animation: ease-in 0.4s reverse both running slide-right-left;
+}
+@keyframes slide-right-left {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
 
+.left-signup p {
+  font-size: 30px;
+  color: rgb(51, 51, 252);
+}
+.login-signup-window .left-signup form {
+  width: 80%;
+}
+.login-signup-window .left-signup form label {
+  font-size: 12px;
+  color: white;
+}
 
+.login-signup-window .left-signup form input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.login-signup-window .left-signup form input:focus {
+  outline: none;
+}
+#agreement {
+  width: fit-content;
+}
+#agreement-label {
+}
+span {
+  color: blue;
+}
+span:hover {
+  cursor: pointer;
+}
+#left-btn-signup {
+  width: fit-content;
+  border: none;
+  background-color: rgb(76, 76, 255);
+  margin-right: 10px;
+  margin-top: 10px;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+#left-btn-signup:hover {
+  cursor: pointer;
+    background-color: rgb(7, 7, 236);
 
+}
 
+.left-btn-login {
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  color: #ff5858;
+}
+.left-btn-login:hover {
+  cursor: pointer;
+  background-color: #ff5858;
+  color: #6dd5fa;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
 
-.right-login{
-    background-color: blue;
-    flex: 1;
+.right-login {
+  background: linear-gradient(to right, #ff5858, #bc2b2b);
+
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 60%;
+  animation: slide-left-to-right 0.5s ease forwards;
+}
+@keyframes slide-left-to-right {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+.right-login p {
+  font-size: 30px;
+  color: #fc8686;
+}
+.login-signup-window .right-login form {
+  width: 80%;
+}
+
+.right-login form label {
+  font-size: 12px;
+  color: white;
+}
+
+.right-login form input {
+  border: none;
+  background: transparent;
+  border-bottom: 1px solid white;
+  margin-top: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 20px;
+}
+.right-login .right-btn-login {
+  width: fit-content;
+  border: none;
+  background-color: #ff5858;
+  margin-right: 10px;
+  color: white;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+.right-login .right-btn-login:hover{
+  cursor: pointer;
+  background-color: #ff1b1b;
+}
+.right-login input:focus {
+  outline: none;
+}
+
+.right-login .right-btn-signup {
+  background-color: transparent;
+  width: fit-content;
+  border: none;
+  color: #33b0dd;
+}
+.right-login .right-btn-signup:hover {
+  cursor: pointer;
+  background-color: #319ce4;
+  color: #ff5858;
+  padding-left: 8px;
+  padding-right: 8px;
+  padding-top: 3px;
+  padding-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+  .right-login {
+    margin-left: 40%;
+    width: 60%;
+  }
+  .left-signup {
+    width: 60%;
+  }
+}
+button:focus {
+  outline: 2px solid #ffffffaa;
+  outline-offset: 2px;
 }
