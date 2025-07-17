@@ -1,4 +1,20 @@
 .map-container {
-    background-color: gray;
-    
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.full-screen-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1000;
+}
+.fullscreen{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: white;
+    height: 100vh;
+    width: 100vw;
 }

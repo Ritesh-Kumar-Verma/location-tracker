@@ -3,7 +3,7 @@ import { assets } from "../../assets/assets";
 import { useState } from "react";
 
 const Navbar = ({activeTab , setActiveTab}) => {
-  const navbarMenuItems = ["Members", "Groups"];
+  const navbarMenuItems = ["Members", "Groups","Me"];
 
   return (
     <header className="navbar">

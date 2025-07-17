@@ -7,6 +7,7 @@ import Members from '../Members/Members'
 import Groups from '../Groups/Groups'
 //need to delete if not used
 import Map from "../Map/Map";
+import Me from "../Me/Me";
 
 const Home = () => {
     const [activeTab , setActiveTab] = useState("Members")
@@ -15,7 +16,8 @@ const Home = () => {
 
     const tabComponents = {"Members":<Members/>,
     
-      "Groups":<Groups/>
+      "Groups":<Groups/>,
+      "Me":<Me/>
     
     }
 
@@ -44,9 +46,9 @@ const Home = () => {
     <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
 
 
-    {/* {tabComponents[activeTab]} */}
+    {tabComponents[activeTab]}
 
-    {position}
+  
 
      
    
