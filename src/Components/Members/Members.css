@@ -1,0 +1,35 @@
+.members-window{
+    /* background-color: gray; */
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+}
+.members-list{
+    /* background-color: white;     */
+    display: flex;
+    flex-direction: column;
+    border-right: 1px white solid;
+    gap: 10px;
+}
+
+.member{
+    padding: 10px;
+    
+    
+}
+.member:hover{
+    cursor: pointer;
+    background-color: rgb(35, 161, 235);
+}
+.active-member{
+    background-color: rgb(54, 170, 247);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.member-map-info{
+    background-color: gray;
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}

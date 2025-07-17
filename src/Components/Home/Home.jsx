@@ -1,12 +1,41 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Home.css";
 import Sidebar from "../Sidebar/Sidebar";
 import Navbar from '../Navbar/Navbar'
 import {useState} from 'react'
-
+import Members from '../Members/Members'
+import Groups from '../Groups/Groups'
+//need to delete if not used
+import Map from "../Map/Map";
 
 const Home = () => {
     const [activeTab , setActiveTab] = useState("Members")
+  
+    const [position , updatePosition] = useState(null)
+
+    const tabComponents = {"Members":<Members/>,
+    
+      "Groups":<Groups/>
+    
+    }
+
+    useEffect(()=>{
+      navigator.geolocation.getCurrentPosition((pos)=>{
+        const {latitude,longitude} = pos.coords
+        updatePosition([latitude,longitude])
+      },(error)=>{
+        console.error("error in getting location")
+      },{
+        enableHighAccuracy:true,
+        timeout:1000,
+        maximumAge:0
+      })
+    },[])
+
+
+    
+
+
 
   return <div className="home-window">
     
@@ -14,10 +43,18 @@ const Home = () => {
 
     <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
 
-    
-    
+
+    {/* {tabComponents[activeTab]} */}
+
+    {position}
+
+     
+   
     
     </div>;
 };
 
 export default Home;
+
+
+
