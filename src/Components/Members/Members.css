@@ -14,8 +14,6 @@
 
 .member{
     padding: 10px;
-    
-    
 }
 .member:hover{
     cursor: pointer;
@@ -27,7 +25,7 @@
     border-bottom-right-radius: 10px;
 }
 .member-map-info{
-    background-color: gray;
+    /* background-color: gray; */
     flex: 1;
     margin: 0 10px 10px 10px;
 }

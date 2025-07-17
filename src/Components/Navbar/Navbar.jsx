@@ -2,7 +2,7 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 import { useState } from "react";
 
-const Navbar = ({activeTab , setActiveTab}) => {
+const Navbar = ({username, activeTab , setActiveTab}) => {
   const navbarMenuItems = ["Members", "Groups","Me"];
 
   return (
@@ -10,7 +10,7 @@ const Navbar = ({activeTab , setActiveTab}) => {
       <div className="navbar-top">
         <div className="left-navbar">
 
-        <img src={assets.boy} alt="" />
+        {/* <img src={assets.boy} alt="" /> */}
         </div>
         <div className="navbar-search-box">
           <img src={assets.search} alt="" />
@@ -18,6 +18,10 @@ const Navbar = ({activeTab , setActiveTab}) => {
           <input type="text" placeholder="Search..." />
         </div>
         <div className="right-navbar">
+          <div className="navbar-username">
+
+          {username}
+          </div>
         <img src={assets.boy} alt="" />
 
         </div>

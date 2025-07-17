@@ -9,8 +9,8 @@ import Groups from '../Groups/Groups'
 import Map from "../Map/Map";
 import Me from "../Me/Me";
 
-const Home = () => {
-    const [activeTab , setActiveTab] = useState("Members")
+const Home = ({username}) => {
+    const [activeTab , setActiveTab] = useState("Me")
   
     const [position , updatePosition] = useState(null)
 
@@ -43,7 +43,7 @@ const Home = () => {
     
     {/* <Sidebar/> */}
 
-    <Navbar activeTab={activeTab} setActiveTab={setActiveTab}/>
+    <Navbar username={username} activeTab={activeTab} setActiveTab={setActiveTab}/>
 
 
     {tabComponents[activeTab]}

@@ -5,6 +5,8 @@ import Home from './Components/Home/Home'
 function App() {
 
 
+  //to be updated as per user
+  const username = "Me"
 
   const [isLoggedIn , setIsLoggedIn] = useState(()=>{
     return localStorage.getItem('isLoggedIn') === "true"
@@ -16,7 +18,7 @@ function App() {
     <div>
       
       {
-        isLoggedIn ? <Home/> : <Login/>
+        isLoggedIn ? <Home username={username}/> : <Login/>
       }
       
     </div>
